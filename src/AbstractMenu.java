@@ -16,4 +16,5 @@ abstract class AbstractMenu implements Menu{
     public void setPrevMenu(Menu prevMenu){
         this.prevMenu=prevMenu;
     }
+
 }
