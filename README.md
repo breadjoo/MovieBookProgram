@@ -27,3 +27,25 @@
   또한 while문에서 if~() {continue;} 가 해당 조건을 무시하는 식이라는 것을 처음 알았다.<br>
   잘 정리된 객체들을 FileWriter 를 통해 다시 txt로 저장할수 있었다.<br>
 
+
+# 영화 예매 관리 프로그램 만들기 JAVA _ DAY2
+
+## Class
+*6. Seats : int 상수를 이용해서 좌석 행,열 정의<br>
+public seats(ArrayList<Reservation> reservations) throws Exception{}
+<br> 안에 2중 for문 활용, map[i][j]로 초기 좌석상태 설정.<br>
+show() : 좌석배열 보여주기<br>
+mark(String seatName) : 좌석번호 확인 후 예매가능여부 반환<br>
+*7. Reservation : <br>
+findById(String resevationId) : BufferedReader와 FileReader를 이용해 reservation.txt 파일을 불러온 후 <br>
+예매번호,영화번호,영화제목,좌석번호 를 배열로 저장 후 예약하는 메소드 생성<br>
+<br>
+```
+toString() {
+return String.format("영화 :%s, 좌석 :%s", movieTitle, seatName);}
+```
+해당 영화,좌석번호 출력을 위한 toString 재정의 <br>
+FindByMovieId역시 비슷한 방법으로 파일을 불러온 후, 클라이언트에게 예매가능한 영화내역을 출력.<br>
+save() : FileWriter 를 통해서 필드에 저장된 값 txt파일로 저장,
+<br>new File Writer(file, true) // true:이어쓰기 모드 (기존 데이터에 이어서 추가로 쓰는방식)<br>
+
